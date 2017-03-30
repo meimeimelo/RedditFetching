@@ -4,7 +4,7 @@ import styles from '../../styles/styles'
 import ListView from '../../components/lists/list'
 
 export default class ListContainer extends Component {
-  render(){
+  render() {
     return(
       <View style={styles.listContainer}>
         <ListView />

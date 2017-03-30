@@ -7,7 +7,7 @@ export default class HeaderContainer extends Component {
   render(){
     return(
       <View style={styles.headerContainer}>
-        <Header />
+        <Header title="Header Title"/>
       </View>
     )
   }

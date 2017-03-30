@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     marginTop: 20,
     height: 50,
-    backgroundColor: 'skyblue',
+    backgroundColor: 'lightskyblue',
   },
   header: {
     flex: 1,
@@ -25,6 +25,15 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderWidth: 2,
     borderColor: 'skyblue'
+  },
+  listContainer: {
+    padding: 20,
+    backgroundColor: 'skyblue',
+  },
+  listText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#fff',
   },
 })
 
