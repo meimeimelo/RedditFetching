@@ -6,7 +6,8 @@ import ListView from '../../components/lists/list'
 export default class ListContainer extends Component {
   render() {
     return(
-      <View style={styles.listContainer}>
+      <View>
+        <ListView />
         <ListView />
       </View>
     )

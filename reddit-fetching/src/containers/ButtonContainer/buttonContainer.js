@@ -4,7 +4,7 @@ import styles from '../../styles/styles'
 import AppButton from '../../components/buttons/btn'
 
 onButtonPress = () => {
-  Alert.alert('Button is clicked!')
+  Alert.alert('You clicked the Button!')
 }
 
 export default class ButtonContainer extends Component {
@@ -13,13 +13,13 @@ export default class ButtonContainer extends Component {
       <View>
         <View style={styles.buttonContainer}>
           <AppButton
-            btnTitle="button1"
+            btnTitle="Some Button"
             onButtonPress={onButtonPress}
             color="skyblue" />
         </View>
         <View style={styles.buttonContainer}>
           <AppButton
-            btnTitle="button1"
+            btnTitle="Do Something"
             onButtonPress={onButtonPress}
             color="skyblue" />
         </View>

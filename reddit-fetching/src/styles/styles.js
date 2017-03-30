@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     borderColor: 'skyblue'
   },
   listContainer: {
+    marginBottom: 10,
     padding: 20,
     backgroundColor: 'skyblue',
   },

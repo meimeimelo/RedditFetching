@@ -5,7 +5,7 @@ import AppButton from './buttons/btn'
 
 const ListView = () => {
   return(
-    <View>
+    <View style={styles.listContainer}>
       <Text style={styles.listText}> Text Something </Text>
     </View>
   )
