@@ -20,7 +20,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
   },
-  listContainer: {
+  buttonContainer: {
+    margin: 10,
+    borderStyle: 'solid',
+    borderWidth: 2,
+    borderColor: 'skyblue'
   },
 })
 
