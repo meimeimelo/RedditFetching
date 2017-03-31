@@ -5,28 +5,35 @@ import styles from '../styles/styles'
 import HeaderContainer from './HeaderContainer/headerContainer'
 import ButtonContainer from './ButtonContainer/buttonContainer'
 import ListContainer from './ListContainer/listContainer'
+import { fetchPostsWithRedux } from '../actions'
 
 class AppContainer extends Component {
 
   componentDidMount(){
-    this.props.fetchPostsWithRedux()
+    this.props.fetchData()
   }
 
   render() {
     return(
       <View>
         <HeaderContainer />
-        <ButtonContainer />
-        <ListContainer />
+        <ButtonContainer fetch={this.props.fetchData} />
+        <ListContainer posts = {this.props.posts}/>
       </View>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return{
+const mapStateToProps = (state, ownProps) => {
+  return {
     posts: state.posts
   }
 }
 
-export default connect((mapStateToProps),{ fetchPostsWithRedux })(AppContainer)
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    fetchData: () => fetchPostsWithRedux(dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer)

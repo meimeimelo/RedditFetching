@@ -15,18 +15,17 @@ export const fetchPostsError = () => ({
   type: FETCH_ERROR
 })
 
-export const fetchPostsWithRedux = () => {
-	return (dispatch) => {
-  	dispatch(fetchPostsRequest());
-    return fetchPosts().then(([response, json]) =>{
-    	if(response.status === 200){
-      	dispatch(fetchPostsSuccess(json))
-      }
-      else{
-      	dispatch(fetchPostsError())
-      }
-    })
-  }
+export const fetchPostsWithRedux = (dispatch) => {
+  dispatch(fetchPostsRequest())
+  fetchPosts().then(([response, json]) =>{
+    if(response.status === 200){
+      jsonResponse = json.data.children
+      dispatch(fetchPostsSuccess(jsonResponse))
+    }
+    else{
+      dispatch(fetchPostsError())
+    }
+  })
 }
 
 const fetchPosts = () => {
