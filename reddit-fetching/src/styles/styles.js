@@ -21,7 +21,13 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   buttonContainer: {
-    margin: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  buttonItems: {
+    margin: 5,
     borderStyle: 'solid',
     borderWidth: 2,
     borderColor: 'skyblue'

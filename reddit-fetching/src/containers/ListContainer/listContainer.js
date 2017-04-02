@@ -9,7 +9,9 @@ export default class ListContainer extends Component {
 
     return(
       <View>
-        { posts ? posts.map((post, index) => <ListView key={index} title={post.data.title} />) : <ListView title={'Loading...'}/> }
+        { posts
+          ? posts.map((post, index) => <ListView key={index} title={post.data.title} />)
+          : <ListView title={'Loading...'}/> }
       </View>
     )
   }

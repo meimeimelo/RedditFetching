@@ -10,18 +10,18 @@ onButtonPress = () => {
 export default class ButtonContainer extends Component {
   render(){
     const { fetch } = this.props
-    
+
     return(
-      <View>
-        <View style={styles.buttonContainer}>
+      <View style={styles.buttonContainer}>
+        <View style={styles.buttonItems}>
           <AppButton
-            btnTitle="Some Button"
+            btnTitle="Reload"
             onButtonPress={fetch}
             color="skyblue" />
         </View>
-        <View style={styles.buttonContainer}>
+        <View style={styles.buttonItems}>
           <AppButton
-            btnTitle="Do Something"
+            btnTitle="Clear"
             onButtonPress={onButtonPress}
             color="skyblue" />
         </View>
