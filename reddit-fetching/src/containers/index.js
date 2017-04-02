@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import styles from '../styles/styles'
 import HeaderContainer from './HeaderContainer/headerContainer'
 import ButtonContainer from './ButtonContainer/buttonContainer'
@@ -17,8 +17,10 @@ class AppContainer extends Component {
     return(
       <View>
         <HeaderContainer />
-        <ButtonContainer fetch={this.props.fetchData} />
-        <ListContainer posts = {this.props.posts}/>
+        <ScrollView style={styles.scrollView}>
+          <ButtonContainer fetch={this.props.fetchData} />
+          <ListContainer posts = {this.props.posts}/>
+        </ScrollView>
       </View>
     )
   }

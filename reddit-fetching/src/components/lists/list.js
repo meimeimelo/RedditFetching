@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import styles from '../../styles/styles'
 import AppButton from '../buttons/btn'
 
-const ListView = ({ title }) => {
+const ListView = ( { title } ) => {
   return(
     <View style={styles.listContainer}>
       <Text style={styles.listText}> {title} </Text>

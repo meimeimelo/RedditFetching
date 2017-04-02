@@ -10,6 +10,7 @@ onButtonPress = () => {
 export default class ButtonContainer extends Component {
   render(){
     const { fetch } = this.props
+    
     return(
       <View>
         <View style={styles.buttonContainer}>

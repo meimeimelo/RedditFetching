@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#fff',
   },
+  scrollView: {
+    height: 500,
+  },
 })
 
 export default styles
